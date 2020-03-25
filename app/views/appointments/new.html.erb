@@ -1,0 +1,16 @@
+<h1>New Appointment</h1>
+
+<%= form_for @appointment do |f| %>
+    <%=   f.label :appointment_datetime    %>
+ <%=   f.text_area :appointment_datetime    %>
+ <%=   f.text_area :appointment.doctor %>
+
+ <%= f.fields_fo :appointments do |appt| %>
+ <%= link_to @appointment.doctor %>
+ <%= %>
+
+ <% end %>
+ <%= f.submit %>
+ <% end %>
+
+<%= link_to @doctor.name, doctor_path %>
